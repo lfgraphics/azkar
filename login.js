@@ -38,7 +38,7 @@ function showLoginForm() {
                     <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md">Login</button>
                     <p id="errorMessage" class="text-red-500 mt-2"></p>
                 </form>
-        <p class="mt-4">Don't have an account? <a href="/azkar/signup.html" class="text-blue-500 underline">Signup here</a></p>
+        <p class="mt-4">Don't have an account? <a href="/signup.html" class="text-blue-500 underline">Signup here</a></p>
             `;
 
     document.getElementById('loginForm').addEventListener('submit', handleLogin);
