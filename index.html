@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Form Submission</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mx-auto p-4">
+        <div class="flex gap-5 justify-between">
+            <h1 class="text-2xl font-bold mb-4">Daily Form Submission</h1>
+            <button onclick="logout()" class="bg-blue-500 text-white py-2 px-4 rounded-md">Logout</button>
+        </div>
+        <form id="dailyForm" class="space-y-4">
+            <!-- UserId and Name fields will be dynamically populated -->
+            <div class="hidden">
+                <label for="userId" class="font-medium text-gray-700">User ID</label>
+                <input type="text" id="userId" name="userId"
+                    class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" readonly>
+            </div>
+            <div class="hidden">
+                <label for="name" class="font-medium text-gray-700">Name</label>
+                <input type="text" id="name" name="name" class="mt-1 block w-full border-gray-300 rounded-md shadow"
+                    readonly>
+            </div>
+            <!-- Other boolean fields -->
+            <p>Azkar</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div>
+                    <label for="laIlahIlallah" class="font-medium text-gray-700">La Ilaha Illallah (100 mrtba)</label>
+                    <input type="checkbox" id="laIlahIlallah" name="laIlahIlallah" class="mt-1">
+                </div>
+                <div>
+                    <label for="astaghfar" class="font-medium text-gray-700">Astaghfar (100 mrtba)</label>
+                    <input type="checkbox" id="astaghfar" name="astaghfar" class="mt-1">
+                </div>
+                <div>
+                    <label for="daroodShareef" class="font-medium text-gray-700">Darood Shareef (100 mrtba)</label>
+                    <input type="checkbox" id="daroodShareef" name="daroodShareef" class="mt-1">
+                </div>
+                <div>
+                    <label for="Allah" class="font-medium text-gray-700">Allah (100 mrtba)</label>
+                    <input type="checkbox" id="Allah" name="Allah" class="mt-1">
+                </div>
+            </div>
+
+            <p>Nawafil</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div>
+                    <label for="tahajjud" class="font-medium text-gray-700">Tahajjud</label>
+                    <input type="checkbox" id="tahajjud" name="tahajjud" class="mt-1">
+                </div>
+                <div>
+                    <label for="ishraq" class="font-medium text-gray-700">Ishraq</label>
+                    <input type="checkbox" id="ishraq" name="ishraq" class="mt-1">
+                </div>
+                <div>
+                    <label for="chasht" class="font-medium text-gray-700">Chasht</label>
+                    <input type="checkbox" id="chasht" name="chasht" class="mt-1">
+                </div>
+                <div>
+                    <label for="awwabeen" class="font-medium text-gray-700">Awwabeen</label>
+                    <input type="checkbox" id="awwabeen" name="awwabeen" class="mt-1">
+                </div>
+            </div>
+            <p>Quraan Pak</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <!-- Kahaf field (conditionally displayed) -->
+                <div id="kahafField" style="display: none;">
+                    <label for="kahaf" class="font-medium text-gray-700">Soore Kahaf</label>
+                    <input type="checkbox" id="kahaf" name="kahaf" class="mt-1">
+                </div>
+                <div>
+                    <label for="yaseen" class="font-medium text-gray-700">Soore Yaseen</label>
+                    <input type="checkbox" id="yaseen" name="yaseen" class="mt-1">
+                </div>
+                <div>
+                    <label for="waqea" class="font-medium text-gray-700">Soore Waqea</label>
+                    <input type="checkbox" id="waqea" name="waqea" class="mt-1">
+                </div>
+                <div>
+                    <label for="tilawateQuraan" class="font-medium text-gray-700">Roz marra sabaq</label>
+                    <input type="checkbox" id="tilawateQuraan" name="tilawateQuraan" class="mt-1">
+                </div>
+            </div>
+            <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md">Submit</button>
+        </form>
+    </div>
+    <div class="grid w-full">
+        <a href="/azkar/analytics.html" class="place-self-center"><button class="bg-blue-500 text-white py-2 px-4 rounded-md mr-4 m-4">Analytics -></button></a>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

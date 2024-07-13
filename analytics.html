@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .tab {
+            display: none;
+        }
+
+        .tab.active {
+            display: block;
+        }
+
+        .table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .table th,
+        .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .table th {
+            background-color: #f2f2f2;
+        }
+
+        .true-checkmark::before {
+            content: '✔️';
+            color: green;
+        }
+
+        .false-checkmark::before {
+            content: '❌';
+            color: red;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <h1 class="text-2xl font-bold mb-4">Analytics</h1>
+        <div class="mb-4">
+            <button onclick="openTab(event, 'allData')" class="bg-blue-500 text-white py-2 px-4 rounded-md mr-4">All
+                Data</button>
+            <button onclick="openTab(event, 'analysis')"
+                class="bg-blue-500 text-white py-2 px-4 rounded-md">Analysis</button>
+        </div>
+
+        <!-- All Data Tab -->
+        <div id="allData" class="tab active">
+            <table class="table mt-4">
+                <thead>
+                    <tr>
+                        <!-- <th>User ID</th> -->
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Tahajjud</th>
+                        <th>Yaseen</th>
+                        <th>Ishraq</th>
+                        <th>Chasht</th>
+                        <th>La Ilaha Illallah</th>
+                        <th>Astaghfar</th>
+                        <th>Darood Shareef</th>
+                        <th>Allah</th>
+                        <th>Tilawat-e-Quran</th>
+                        <th>Awwabeen</th>
+                        <th>Waqea</th>
+                        <th>Surah Mulk</th>
+                        <th>Surah Kahaf</th>
+                        <th>Total Points</th>
+                    </tr>
+                </thead>
+                <tbody id="allDataBody">
+                    <!-- Data will be populated dynamically using JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Analysis Tab -->
+        <div id="analysis" class="tab">
+            <table class="table mt-4">
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Name</th>
+                        <th>Total Points (Selected Month)</th>
+                    </tr>
+                </thead>
+                <tbody id="analysisBody">
+                    <!-- Data will be populated dynamically using JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="analytics.js">
+    </script>
+</body>
+
+</html>
